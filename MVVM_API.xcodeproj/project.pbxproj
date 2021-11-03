@@ -13,6 +13,11 @@
 		1B7AA76E2730149300BD79E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B7AA76C2730149300BD79E0 /* Main.storyboard */; };
 		1B7AA7702730149700BD79E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B7AA76F2730149700BD79E0 /* Assets.xcassets */; };
 		1B7AA7732730149700BD79E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B7AA7712730149700BD79E0 /* LaunchScreen.storyboard */; };
+		1B7AA77B273015AE00BD79E0 /* Petitionn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AA77A273015AE00BD79E0 /* Petitionn.swift */; };
+		1B7AA77F27301EFD00BD79E0 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AA77E27301EFD00BD79E0 /* NewsTableViewCell.swift */; };
+		1B7AA781273022BE00BD79E0 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AA780273022BE00BD79E0 /* APIService.swift */; };
+		1B7AA7862732523E00BD79E0 /* PetitionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AA7852732523E00BD79E0 /* PetitionsViewModel.swift */; };
+		1B7AA7892732543E00BD79E0 /* PetitionsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AA7882732543E00BD79E0 /* PetitionsTableViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		1B7AA76F2730149700BD79E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B7AA7722730149700BD79E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B7AA7742730149700BD79E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B7AA77A273015AE00BD79E0 /* Petitionn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petitionn.swift; sourceTree = "<group>"; };
+		1B7AA77E27301EFD00BD79E0 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		1B7AA780273022BE00BD79E0 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		1B7AA7852732523E00BD79E0 /* PetitionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetitionsViewModel.swift; sourceTree = "<group>"; };
+		1B7AA7882732543E00BD79E0 /* PetitionsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetitionsTableViewDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,68 @@
 		1B7AA7652730149300BD79E0 /* MVVM_API */ = {
 			isa = PBXGroup;
 			children = (
-				1B7AA7662730149300BD79E0 /* AppDelegate.swift */,
-				1B7AA7682730149300BD79E0 /* SceneDelegate.swift */,
+				1B7AA7742730149700BD79E0 /* Info.plist */,
+				1B7AA7872732524600BD79E0 /* ViewModels */,
+				1B7AA7822732513100BD79E0 /* WebService */,
+				1B7AA7832732515E00BD79E0 /* Common */,
+				1B7AA77C27301B0100BD79E0 /* Models */,
+				1B7AA77D27301B3800BD79E0 /* Controllers */,
+				1B7AA7842732519F00BD79E0 /* Base.Iproj */,
+			);
+			path = MVVM_API;
+			sourceTree = "<group>";
+		};
+		1B7AA77C27301B0100BD79E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B7AA77A273015AE00BD79E0 /* Petitionn.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1B7AA77D27301B3800BD79E0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				1B7AA76A2730149300BD79E0 /* ViewController.swift */,
+				1B7AA77E27301EFD00BD79E0 /* NewsTableViewCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1B7AA7822732513100BD79E0 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				1B7AA780273022BE00BD79E0 /* APIService.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		1B7AA7832732515E00BD79E0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1B7AA7682730149300BD79E0 /* SceneDelegate.swift */,
+				1B7AA7662730149300BD79E0 /* AppDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1B7AA7842732519F00BD79E0 /* Base.Iproj */ = {
+			isa = PBXGroup;
+			children = (
 				1B7AA76C2730149300BD79E0 /* Main.storyboard */,
 				1B7AA76F2730149700BD79E0 /* Assets.xcassets */,
 				1B7AA7712730149700BD79E0 /* LaunchScreen.storyboard */,
-				1B7AA7742730149700BD79E0 /* Info.plist */,
 			);
-			path = MVVM_API;
+			path = Base.Iproj;
+			sourceTree = "<group>";
+		};
+		1B7AA7872732524600BD79E0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1B7AA7852732523E00BD79E0 /* PetitionsViewModel.swift */,
+				1B7AA7882732543E00BD79E0 /* PetitionsTableViewDataSource.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +201,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B7AA77B273015AE00BD79E0 /* Petitionn.swift in Sources */,
 				1B7AA76B2730149300BD79E0 /* ViewController.swift in Sources */,
+				1B7AA7892732543E00BD79E0 /* PetitionsTableViewDataSource.swift in Sources */,
+				1B7AA77F27301EFD00BD79E0 /* NewsTableViewCell.swift in Sources */,
 				1B7AA7672730149300BD79E0 /* AppDelegate.swift in Sources */,
+				1B7AA7862732523E00BD79E0 /* PetitionsViewModel.swift in Sources */,
+				1B7AA781273022BE00BD79E0 /* APIService.swift in Sources */,
 				1B7AA7692730149300BD79E0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
